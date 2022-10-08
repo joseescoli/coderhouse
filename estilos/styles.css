@@ -1,0 +1,136 @@
+/* RESET de estilos */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.superior {
+    /* width: 10%; */
+    background-color: whitesmoke;
+}
+
+.superior__celdaMenu {
+    position: relative;
+    padding-left: 50%;
+    width: 100%;
+}
+
+.superior__celdaMenu__menu {
+    line-height: 1.5;
+}
+
+.superior__celdaMenu__menu li{
+    position: relative;
+    list-style-type: none;
+    background: transparent;
+    width: 111px;
+}
+
+.superior__celdaMenu__menu li button {
+    width: 111px;
+    border-color: red;
+    border-radius: 15px;
+}
+
+.superior__celdaMenu__menu li button:hover {
+    background-color: yellow;
+}
+
+.superior__celdaMenu__menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.paginaActual {
+    background-color: grey;
+}
+
+.cuadro1 {
+    line-height: 1.2;
+    margin: 10px 10px 10px 10px;
+    background-color: aliceblue;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.cuadro1 img {
+    height:400px;
+    /* padding-left: 50px; */
+}
+.cuadro1__foto1 {
+    /* position: relative; */
+    left: 80%;
+}
+
+.cuadro1__foto2 {
+    /* position: relative; */
+    right: 10%;
+}
+
+.cuadro2 {
+    line-height: 1.2;
+    margin: 10px 10px 10px 10px;
+    background-color:burlywood;
+    width: 100%;
+    text-align: center;
+}
+
+.cuadro2 img {
+    height: 500px;
+    /* padding-left: 10%; */
+}
+
+/* 
+.cuadro2__foto1 {
+
+} */
+
+.cuadro2__foto2 {
+    margin-left: 5%
+}
+
+footer {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    background-color: grey;
+}
+
+footer img {
+    padding: 10px;
+    width: 40px;
+}
+
+.servicios {
+    line-height: 1.2;
+    margin: 10px 10px 10px 10px;
+    background-color:burlywood;
+    width: 100%;
+    text-align: center;
+}
+
+.contacto {
+    line-height: 1.2;
+    margin: 10px 10px 10px 10px;
+    background-color:burlywood;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.contacto__imagen {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;   
+}
+
+.contacto__imagen img {
+    width: 60%;
+}
+
+.servicios img {
+    height: 92px;
+}
