@@ -1,2 +1,0 @@
-https://wa.me/541164662750?text=Consulta%20sobre%20clases%20de%20ingl%C3%A9s
-https://api.whatsapp.com/send/?phone=541164662750&text=Consulta+sobre+clases+de+ingl%C3%A9s&type=phone_number&app_absent=0
