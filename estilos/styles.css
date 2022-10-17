@@ -1,95 +1,68 @@
-/* RESET de estilos */
+/*===================================================
+RESET de estilos
+===================================================*/
 * {
     margin: 0px;
     padding: 0px;
 }
 
+/*===================================================
+Estilos barra navegación
+===================================================*/
+
 .superior {
-    /* width: 10%; */
     background-color: whitesmoke;
 }
 
-.superior__celdaMenu {
-    position: relative;
-    padding-left: 50%;
+.superior_nav {
+    display: flex;
     width: 100%;
 }
 
-.superior__celdaMenu__menu {
+.logo {
+    width: 50%;
+}
+
+.superior__contenedor__menu {
+    width: 50%;
+}
+
+.superior__contenedor__lista {
     line-height: 1.5;
 }
 
-.superior__celdaMenu__menu li{
+.superior__contenedor__lista li{
     position: relative;
+    text-align: center;
     list-style-type: none;
-    background: transparent;
-    width: 111px;
-}
-
-.superior__celdaMenu__menu li button {
-    width: 111px;
-    border-color: red;
+    background-color: rgb(199, 202, 204);
+    width: 120px;
+    height: 22px;
+    border: solid red 1px;
     border-radius: 15px;
 }
 
-.superior__celdaMenu__menu li button:hover {
+.superior__contenedor__lista li:hover {
     background-color: yellow;
 }
 
-.superior__celdaMenu__menu li a {
+.superior__contenedor__lista li a {
+    display: block;
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
+
 .paginaActual {
-    background-color: grey;
+    background-color: black;
+    text-align: left;
+    font-weight: bold;
 }
 
-.cuadro1 {
-    line-height: 1.2;
-    margin: 10px 10px 10px 10px;
-    background-color: aliceblue;
-    width: 100%;
-    text-align: center;
-    
-}
-
-.cuadro1 img {
-    height:400px;
-    /* padding-left: 50px; */
-}
-.cuadro1__foto1 {
-    /* position: relative; */
-    left: 80%;
-}
-
-.cuadro1__foto2 {
-    /* position: relative; */
-    right: 10%;
-}
-
-.cuadro2 {
-    line-height: 1.2;
-    margin: 10px 10px 10px 10px;
-    background-color:burlywood;
-    width: 100%;
-    text-align: center;
-}
-
-.cuadro2 img {
-    height: 500px;
-    /* padding-left: 10%; */
-}
-
-/* 
-.cuadro2__foto1 {
-
-} */
-
-.cuadro2__foto2 {
-    margin-left: 5%
-}
+/*===================================================
+Estilos pié de página navegación
+===================================================*/
 
 footer {
     margin-top: 30px;
@@ -103,6 +76,51 @@ footer img {
     width: 40px;
 }
 
+
+/*===================================================
+Estilos página INDEX
+===================================================*/
+
+.cuadro1 {
+    line-height: 1.2;
+    margin: 10px 10px 10px 10px;
+    background-color: aliceblue;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.cuadro1 img {
+    height:400px;
+}
+.cuadro1__foto1 {
+    left: 80%;
+}
+
+.cuadro1__foto2 {
+    right: 10%;
+}
+
+.cuadro2 {
+    line-height: 1.2;
+    margin: 10px 10px 10px 10px;
+    background-color:burlywood;
+    width: 100%;
+    text-align: center;
+}
+
+.cuadro2 img {
+    height: 500px;
+}
+
+.cuadro2__foto2 {
+    margin-left: 5%
+}
+
+/*===================================================
+Estilos página Servicios
+===================================================*/
+
 .servicios {
     line-height: 1.2;
     margin: 10px 10px 10px 10px;
@@ -110,6 +128,14 @@ footer img {
     width: 100%;
     text-align: center;
 }
+
+.servicios img {
+    height: 92px;
+}
+
+/*===================================================
+Estilos página Contacto
+===================================================*/
 
 .contacto {
     line-height: 1.2;
@@ -119,18 +145,29 @@ footer img {
     text-align: center;
 }
 
-
-
 .contacto__imagen {
     width: 100%;
-    height: 120px;
-    overflow: hidden;   
+    min-height: 60px;
+    max-height: 120px;
+    overflow: hidden;
+    max-width: 60%;
 }
 
 .contacto__imagen img {
     width: 60%;
 }
 
-.servicios img {
-    height: 92px;
+
+.formulario {
+    width: 100%;
 }
+
+.formulario__item {
+    margin-top: 50px;
+}
+
+
+/*===================================================
+Estilos nuevos
+===================================================*/
+
