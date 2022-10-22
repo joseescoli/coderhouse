@@ -5,8 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="images/ag_32x32.png">
-	<link rel="stylesheet" href="estilos/styles.css">
 	<title>AG Institute</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="estilos/styles.css">
 </head>
 <body>
 	<!-- Título y menú -->
@@ -28,21 +30,26 @@
 	
 	<!-- Secciones informativas del sitio -->
 	<h1>AG Institute - Clases de inglés</h1>
-	<section>
-		<article class="cuadro1">
-			<img class="cuadro1__foto1" src="./images/exam.jpg" alt="Examen">
-			<img class="cuadro1__foto2" src="./images/students.jpg" alt="Alumnos">
-			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo optio dolore eius dolor, fuga, veniam voluptatem et suscipit quas facere tempora incidunt cupiditate officia accusantium maiores quam officiis quisquam eum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nostrum officia enim laudantium, vitae fugiat, ducimus ab debitis itaque, alias optio voluptate? Laborum nemo odio illo magni illum iure aut! Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Nostrum doloremque, aperiam accusamus. Quod, consequatur! Nam distinctio laborum eius officiis, explicabo ipsa, nostrum at aperiam adipisci delectus iusto deserunt repellendus, harum. </p>
-		</article>
-	</section>
-	<section>
-		<article class="cuadro2">
-			<img class="cuadro2__foto1" src="./images/studying-student.jpg" alt="Estudiando">
-			<img class="cuadro2__foto2" src="./images/teacher-student.jpg" alt="Profesora">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellendus accusamus alias non voluptates eos, mollitia deleniti nemo! Eius assumenda voluptatem tenetur qui quasi voluptate illo ratione saepe aperiam delectus?</p>
-		</article>
-	</section>
-		<!-- Pié de opagina --> 
+	<div id="galeria" class="carousel slide carousel-fade" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-bs-interval="4000">
+				<img src="./images/exam.jpg" class="d-block w-100" alt="Examen">
+				<div class="carousel-caption d-none d-md-block">
+					<h2>Primera imagen</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque veniam fugiat sit corporis molestias officiis voluptatum minus harum, aliquid sed excepturi aperiam quam accusamus libero, quibusdam iusto id vel.</p>
+				</div>
+			</div>
+			<div class="carousel-item" data-bs-interval="4000">
+				<img src="./images/students.jpg" class="d-block w-100" alt="Alumnos">
+				<div class="carousel-caption d-none d-md-block">
+					<h2>Segunda imagen</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus autem et delectus ab rerum, iure, consequuntur suscipit tempore debitis neque exercitationem! Consectetur vitae nostrum iste harum exercitationem pariatur omnis magni.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Pié de opagina --> 
 	<footer>
 		<a href="https://www.facebook.com/ag.english.institute"><img src="./images/facebook.png" alt="Facebook"></a>
 		<a href="https://www.instagram.com/ag.english.institute/"><img src="./images/instagram.png" alt="Instagram"></a>

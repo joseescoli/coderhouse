@@ -29,18 +29,18 @@
 
 
 	<!-- fila de información de mi sitio -->
-	<section class="contacto__imagen">
+	<div class="contacto__imagen">
 		<a href="https://api.whatsapp.com/send/?phone=541164662750&text=Consulta+sobre+clases+de+ingl%C3%A9s&type=phone_number&app_absent=0">
 			<img src="../images/contacto.jpg" alt="img contacto">
 		</a>
-	</section>
-	<section>
+	</div>
+	<div class="contacto__titulo">
 		<h1>CONTACTO</h1>
-	</section>
+	</div>
 	<!-- formulario de contacto -->
-	<section>
-		<article class="contacto">
-			<form action="#" class="formulario">
+	<div class="contacto">
+		<form action="#" class="formulario">
+			<fieldset>
 				<div class="formulario__item"><label for="nombre">Nombre *</label></div>
 				<div><input type="text" placeholder="Nombre"></input></div>
 				<div><input type="text" placeholder="Apellidos"></input></div>
@@ -50,12 +50,17 @@
 				
 				<div class="formulario__item"><label for="telefono">Teléfono</label></div>
 				<div><input type="number" placeholder="+5491112345678" name="email"></input></div>
-				
+			</fieldset>
+			
+			<fieldset>
 				<div class="formulario__item">
 					<input type="checkbox" name="llamar" value=""></input>
 					<label for="llamar">Quiero que me llamen</label>
 				</div>
-				<div class="formulario__item"><label for="suscripcion">Me gustaría recibir infomación o reservar vacantes para:</label></div>
+			</fieldset>
+
+			<fieldset>
+				<div class="formulario__item"><label for="suscripcion">Me gustaría recibir infomación o<br> reservar vacantes para:<br><br></label></div>
 				<div>
 					<input type="checkbox" name="suscripcion" value="1"></input>
 					<label for="suscripcion">Cursos de 0 a 7 años</label>
@@ -76,15 +81,18 @@
 					<input type="checkbox" name="suscripcion" value="5"></input>
 					<label for="suscripcion">Cursos Online</label>
 				</div>
+			</fieldset>
+			
+			<fieldset>
 				<div class="formulario__item"><label for="consulta">Consulta o comentario *</label></div>
-				<div><textarea name="texto" id="comentario" cols="100" rows="10"></textarea></div>
+				<div><textarea name="texto" id="comentario" rows="10"></textarea></div>
 				<div>
 					<input type="submit" value="Enviar"></input>
 					<input type="reset" value="Limpiar"></input>
 				</div>
-			</form>
-		</article>
-	</section>
+			</fieldset>
+		</form>
+	</div>
 	<!-- cierre de form contacto -->
 	<!-- inicio de footer --> 
 	<footer>

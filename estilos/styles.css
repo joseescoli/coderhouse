@@ -1,9 +1,24 @@
 /*===================================================
 RESET de estilos
 ===================================================*/
-* {
+*, ::after, ::before {
     margin: 0px;
     padding: 0px;
+    /* reseteo propiedad Bootstrap */
+    box-sizing: content-box;
+}
+
+/*===================================================
+Estilos globales
+===================================================*/
+
+body {
+    background-color: whitesmoke;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+h1 {
+    font-size: calc(1.375rem + 1.5vw);
 }
 
 /*===================================================
@@ -12,11 +27,16 @@ Estilos barra navegación
 
 .superior {
     background-color: whitesmoke;
+    margin-top: 10px;
 }
 
 .superior_nav {
     display: flex;
     width: 100%;
+}
+
+.logo img {
+    position: relative;
 }
 
 .logo {
@@ -32,18 +52,31 @@ Estilos barra navegación
 }
 
 .superior__contenedor__lista li{
-    position: relative;
+    margin-bottom: 5px;
     text-align: center;
-    list-style-type: none;
     background-color: rgb(199, 202, 204);
-    width: 120px;
+    background: linear-gradient(to left, rgb(192,192,192) 90%, red 80%);
+    width: 150px;
     height: 22px;
     border: solid red 1px;
     border-radius: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.5);
 }
 
-.superior__contenedor__lista li:hover {
+.superior__contenedor__lista li:not(.paginaActual){
+    list-style-type: none;
+    transition: all 1s;
+}
+
+.superior__contenedor__lista li:hover:not(.paginaActual) {
+    background: none;
     background-color: yellow;
+    scale: 1.1;
+    transition: all 0.5s;
+}
+
+.paginaActual {
+    list-style-image: url("../images/flecha.png");
 }
 
 .superior__contenedor__lista li a {
@@ -53,68 +86,41 @@ Estilos barra navegación
     font-weight: bold;
 }
 
-
-.paginaActual {
-    background-color: black;
-    text-align: left;
-    font-weight: bold;
-}
-
 /*===================================================
-Estilos pié de página navegación
+Estilos pié de página FOOTER
 ===================================================*/
 
 footer {
-    margin-top: 30px;
     width: 100%;
     text-align: center;
     background-color: grey;
+    /* RESETEO propiedad Bootstrap */
+    box-sizing: content-box;
+
 }
 
 footer img {
-    padding: 10px;
+    padding: 20px;
     width: 40px;
-}
 
+    animation-name: destacar;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+ 
+}
 
 /*===================================================
-Estilos página INDEX
+Estilos página Inicio
 ===================================================*/
 
-.cuadro1 {
-    line-height: 1.2;
+#galeria {
     margin: 10px 10px 10px 10px;
-    background-color: aliceblue;
-    width: 100%;
-    text-align: center;
-    
-}
-
-.cuadro1 img {
-    height:400px;
-}
-.cuadro1__foto1 {
-    left: 80%;
-}
-
-.cuadro1__foto2 {
-    right: 10%;
-}
-
-.cuadro2 {
-    line-height: 1.2;
-    margin: 10px 10px 10px 10px;
-    background-color:burlywood;
-    width: 100%;
-    text-align: center;
-}
-
-.cuadro2 img {
-    height: 500px;
-}
-
-.cuadro2__foto2 {
-    margin-left: 5%
+    justify-items: center;
+    align-items: center;
+    width: 90%;
 }
 
 /*===================================================
@@ -123,10 +129,13 @@ Estilos página Servicios
 
 .servicios {
     line-height: 1.2;
-    margin: 10px 10px 10px 10px;
     background-color:burlywood;
     width: 100%;
     text-align: center;
+}
+
+.servicios p {
+    margin-bottom: 10px;
 }
 
 .servicios img {
@@ -134,12 +143,43 @@ Estilos página Servicios
 }
 
 /*===================================================
+Estilos página Sobre Somos
+===================================================*/
+
+.producto {
+    width: 100%
+}
+
+.producto p {
+    margin-top: 10px;
+}
+
+.producto video {
+    width: 90%;
+}
+
+/*===================================================
+Estilos página Ubicación
+===================================================*/
+
+.ubicacion, .direccion {
+    margin: 10px 10px 10px 10px;
+}
+
+.ubicacion iframe {
+    width: 90%;
+}
+
+/*===================================================
 Estilos página Contacto
 ===================================================*/
 
+.contacto__titulo {
+    margin-bottom: 10px;
+}
 .contacto {
+    margin-top: 10px;
     line-height: 1.2;
-    margin: 10px 10px 10px 10px;
     background-color:burlywood;
     width: 100%;
     text-align: center;
@@ -157,17 +197,47 @@ Estilos página Contacto
     width: 60%;
 }
 
-
 .formulario {
-    width: 100%;
+    margin-top: 10px;
+}
+
+.formulario fieldset {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    border: solid grey 2px;
+    border-radius: 20px;
 }
 
 .formulario__item {
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
+#comentario {
+    width: 80%;
+}
 
+/* Ajustes Responsive celulares */
+@media only screen and (max-width: 400px) {
+    .formulario fieldset {
+        margin: 0 auto;
+        padding-bottom: 0px;
+    }
+
+    footer img {
+        padding: 0;
+        width: 20px;
+    }
+    
+}
 /*===================================================
-Estilos nuevos
+Animación
 ===================================================*/
 
+@keyframes destacar {
+    from { }
+    to {
+        transform: scale(1.2);
+    }
+}
