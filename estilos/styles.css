@@ -1,243 +1,220 @@
+@charset "UTF-8";
 /*===================================================
 RESET de estilos
 ===================================================*/
+/* reseteo propiedad Bootstrap */
 *, ::after, ::before {
-    margin: 0px;
-    padding: 0px;
-    /* reseteo propiedad Bootstrap */
-    box-sizing: content-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
 }
 
 /*===================================================
 Estilos globales
 ===================================================*/
-
 body {
-    background-color: whitesmoke;
-    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  background-color: whitesmoke;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 h1 {
-    font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.375rem + 1.5vw);
 }
 
 /*===================================================
 Estilos barra navegación
 ===================================================*/
-
 .superior {
-    background-color: whitesmoke;
-    margin-top: 10px;
+  background-color: whitesmoke;
+  margin-top: 10px;
 }
 
 .superior_nav {
-    display: flex;
-    width: 100%;
-}
-
-.logo img {
-    position: relative;
+  display: flex;
+  width: 100%;
 }
 
 .logo {
-    width: 50%;
+  width: 50%;
+}
+.logo img {
+  position: relative;
 }
 
 .superior__contenedor__menu {
-    width: 50%;
+  width: 50%;
 }
 
 .superior__contenedor__lista {
-    line-height: 1.5;
+  line-height: 1.5;
 }
-
-.superior__contenedor__lista li{
-    margin-bottom: 5px;
-    text-align: center;
-    background-color: rgb(199, 202, 204);
-    background: linear-gradient(to left, rgb(192,192,192) 90%, red 80%);
-    width: 150px;
-    height: 22px;
-    border: solid red 1px;
-    border-radius: 15px;
-    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.5);
+.superior__contenedor__lista li {
+  margin-bottom: 5px;
+  text-align: center;
+  background-color: rgb(199, 202, 204);
+  background: linear-gradient(to left, rgb(192, 192, 192) 90%, red 80%);
+  width: 150px;
+  height: 22px;
+  border: solid red 1px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
 }
-
-.superior__contenedor__lista li:not(.paginaActual){
-    list-style-type: none;
-    transition: all 1s;
+.superior__contenedor__lista li:not(.paginaActual) {
+  list-style-type: none;
+  transition: all 1s;
 }
-
 .superior__contenedor__lista li:hover:not(.paginaActual) {
-    background: none;
-    background-color: yellow;
-    scale: 1.1;
-    transition: all 0.5s;
+  background: none;
+  background-color: yellow;
+  scale: 1.1;
+  transition: all 0.5s;
+}
+.superior__contenedor__lista li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .paginaActual {
-    list-style-image: url("../images/flecha.png");
-}
-
-.superior__contenedor__lista li a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  list-style-image: url("../images/flecha.png");
 }
 
 /*===================================================
 Estilos pié de página FOOTER
 ===================================================*/
-
 footer {
-    width: 100%;
-    text-align: center;
-    background-color: grey;
-    /* RESETEO propiedad Bootstrap */
-    box-sizing: content-box;
-
+  width: 100%;
+  text-align: center;
+  background-color: grey;
+  box-sizing: content-box;
 }
-
 footer img {
-    padding: 20px;
-    width: 40px;
-
-    animation-name: destacar;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
- 
+  padding: 20px;
+  width: 40px;
+  animation-name: destacar;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* Ajustes Responsive celulares */
+}
+@media only screen and (max-width: 400px) {
+  footer img {
+    padding: 0;
+    width: 20px;
+  }
 }
 
 /*===================================================
 Estilos página Inicio
 ===================================================*/
-
 #galeria {
-    margin: 10px 10px 10px 10px;
-    justify-items: center;
-    align-items: center;
-    width: 90%;
+  margin: 10px 10px 10px 10px;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
 }
 
 /*===================================================
 Estilos página Servicios
 ===================================================*/
-
 .servicios {
-    line-height: 1.2;
-    background-color:burlywood;
-    width: 100%;
-    text-align: center;
+  line-height: 1.2;
+  background-color: burlywood;
+  width: 100%;
+  text-align: center;
 }
-
 .servicios p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-
 .servicios img {
-    height: 92px;
+  height: 92px;
 }
 
 /*===================================================
 Estilos página Sobre Somos
 ===================================================*/
-
 .producto {
-    width: 100%
+  width: 100% p;
+  width-margin-top: 10px;
 }
-
-.producto p {
-    margin-top: 10px;
-}
-
 .producto video {
-    width: 90%;
+  width: 90%;
 }
 
 /*===================================================
 Estilos página Ubicación
 ===================================================*/
-
-.ubicacion, .direccion {
-    margin: 10px 10px 10px 10px;
+.ubicacion {
+  margin: 10px 10px 10px 10px;
+}
+.ubicacion iframe {
+  width: 90%;
 }
 
-.ubicacion iframe {
-    width: 90%;
+.direccion {
+  margin: 10px 10px 10px 10px;
 }
 
 /*===================================================
 Estilos página Contacto
 ===================================================*/
-
 .contacto__titulo {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
+
 .contacto {
-    margin-top: 10px;
-    line-height: 1.2;
-    background-color:burlywood;
-    width: 100%;
-    text-align: center;
+  margin-top: 10px;
+  line-height: 1.2;
+  background-color: burlywood;
+  width: 100%;
+  text-align: center;
 }
 
 .contacto__imagen {
-    width: 100%;
-    min-height: 60px;
-    max-height: 120px;
-    overflow: hidden;
-    max-width: 60%;
+  width: 100%;
+  min-height: 60px;
+  max-height: 120px;
+  overflow: hidden;
+  max-width: 60%;
 }
-
 .contacto__imagen img {
-    width: 60%;
+  width: 60%;
 }
 
 .formulario {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-
 .formulario fieldset {
-    margin-left: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    padding-bottom: 10px;
-    border: solid grey 2px;
-    border-radius: 20px;
+  margin: 10px 10px 10px 10px;
+  border: solid grey 2px;
+  border-radius: 20px;
+  /* Ajustes Responsive celulares */
+}
+@media only screen and (max-width: 400px) {
+  .formulario fieldset {
+    margin: 0 auto;
+    padding-bottom: 0px;
+  }
 }
 
 .formulario__item {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #comentario {
-    width: 80%;
+  width: 80%;
 }
 
-/* Ajustes Responsive celulares */
-@media only screen and (max-width: 400px) {
-    .formulario fieldset {
-        margin: 0 auto;
-        padding-bottom: 0px;
-    }
-
-    footer img {
-        padding: 0;
-        width: 20px;
-    }
-    
-}
 /*===================================================
 Animación
 ===================================================*/
-
 @keyframes destacar {
-    from { }
-    to {
-        transform: scale(1.2);
-    }
+  to {
+    transform: scale(1.2);
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */
