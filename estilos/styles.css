@@ -209,6 +209,116 @@ Estilos página Contacto
 }
 
 /*===================================================
+Estilos página 404
+===================================================*/
+.body-404 {
+  background-image: url("https://images.unsplash.com/photo-1590161311659-852a5207c5b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  font-family: "Roboto", "sans-serif";
+}
+.body-404 main p {
+  margin-top: 20px;
+}
+
+main {
+  display: flex;
+  height: 70vh;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.logo-404 {
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+
+.header404 {
+  font-family: "Chango", cursive;
+  font-size: 48px;
+}
+
+.contenido-404 {
+  text-align: center;
+}
+
+/*===================================================
+Animación RELOJ
+===================================================*/
+.countdown {
+  display: grid;
+  margin: 1em auto;
+  width: 10em;
+  height: 10em;
+}
+.countdown::after {
+  grid-column: 1;
+  grid-row: 1;
+  place-self: center;
+  font: 2.5em/2 ubuntu mono, consolas, monaco, monospace;
+  animation: num 4s steps(1) infinite;
+  content: "0:" counter(s, decimal-leading-zero);
+}
+
+@keyframes num {
+  0% {
+    counter-reset: s 4;
+  }
+  25% {
+    counter-reset: s 3;
+  }
+  50% {
+    counter-reset: s 2;
+  }
+  75% {
+    counter-reset: s 1;
+  }
+  100% {
+    counter-reset: s 0;
+  }
+}
+svg {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+[r] {
+  fill: none;
+  stroke: silver;
+}
+[r] + [r] {
+  transform: rotate(-90deg);
+  stroke-linecap: round;
+  stroke: #8A9B0F;
+  animation: arc 4s linear infinite;
+  animation-name: arc, col;
+}
+
+@keyframes arc {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes col {
+  0% {
+    stroke: #8A9B0F;
+  }
+  25% {
+    stroke: #F8CA00;
+  }
+  50% {
+    stroke: #E97F02;
+  }
+  75% {
+    stroke: #BD1550;
+  }
+  100% {
+    stroke: #490A3D;
+  }
+}
+/*===================================================
 Animación
 ===================================================*/
 @keyframes destacar {
