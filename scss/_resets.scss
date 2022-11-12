@@ -1,0 +1,17 @@
+/*===================================================
+RESET de estilos
+===================================================*/
+/* reseteo propiedad Bootstrap */
+@mixin reset-bootstrap {
+    box-sizing: content-box;
+}
+
+%reset-estilos {
+margin: 0px;
+padding: 0px;
+@include reset-bootstrap;
+}
+
+* , ::after, ::before {
+@extend %reset-estilos;
+}
