@@ -1,5 +1,29 @@
 $color-fondo: whitesmoke;
+$color-botones: rgb(199, 202, 204);
+$sombra: 6px 6px 5px 0px rgba(0,0,0,0.5);
 
 @mixin margenes-10 {
     margin: 10px 10px 10px 10px;
+}
+
+%servicios-cajas {
+    @include margenes-10;
+    padding: 10px;
+    background-color: rgba(199, 202, 204, 0.7);
+    box-shadow: $sombra;
+    border-radius: 20px;
+    p {
+        font-weight: bold;
+    }
+    ul {
+        list-style-type: none;
+    }
+}
+
+%servicios-fotos {
+    @include margenes-10;
+    padding: 10px;
+    img {
+        box-shadow: $sombra;
+    }
 }
