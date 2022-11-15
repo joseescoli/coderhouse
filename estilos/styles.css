@@ -55,6 +55,13 @@ Estilos barra navegación
   display: flex;
   width: 100%;
 }
+@media only screen and (max-width: 400px) {
+  .superior_nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 
 .logo {
   width: 50%;
@@ -65,6 +72,11 @@ Estilos barra navegación
 
 .superior__contenedor__menu {
   width: 50%;
+}
+@media only screen and (max-width: 400px) {
+  .superior__contenedor__menu {
+    margin-left: 30px;
+  }
 }
 
 .superior__contenedor__lista {
@@ -103,18 +115,8 @@ Estilos barra navegación
 }
 
 /*===================================================
-Estilos <main> y pié de página <FOOTER>
+Estilo Pié de página <FOOTER>
 ===================================================*/
-main {
-  display: flex;
-  justify-content: flex-start;
-  justify-items: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
 footer {
   width: 100%;
   text-align: center;
@@ -135,11 +137,22 @@ footer img {
 /*===================================================
 Estilos página Inicio
 ===================================================*/
+.principal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 #galeria {
   margin: 10px 10px 10px 10px;
   justify-items: center;
   align-items: center;
   width: 90%;
+}
+@media only screen and (max-width: 400px) {
+  #galeria {
+    width: 100%;
+  }
 }
 
 /*===================================================
@@ -197,6 +210,13 @@ Estilos página Servicios
   grid-column: 3;
   grid-row: 2;
 }
+@media only screen and (max-width: 400px) {
+  .grilla {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 
 /*===================================================
 Estilos página Producto // Sobre Nosotros
@@ -204,37 +224,68 @@ Estilos página Producto // Sobre Nosotros
 .producto {
   width: 100%;
 }
-.producto div {
-  text-align: center;
-}
-.producto div video {
-  width: 90%;
-}
 .producto h2 {
   margin: 10px 10px 10px 10px;
 }
 .producto p {
   font-weight: bold;
 }
-.producto section {
+
+.contenedor__producto {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 400px) {
+  .contenedor__producto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+.video {
+  text-align: center;
+  width: 50%;
+}
+.video video {
+  width: 90%;
+}
+@media only screen and (max-width: 400px) {
+  .video {
+    width: 100%;
+  }
+}
+
+.contenedor__equipo {
+  text-align: center;
+  width: 50%;
+}
+@media only screen and (max-width: 400px) {
+  .contenedor__equipo {
+    width: 100%;
+  }
+}
+
+.equipo {
   margin-top: 10px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
-.producto section div {
+.equipo div {
   height: 250px;
   width: 300px;
 }
-.producto section div img {
+.equipo div img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
 }
-.producto section p:nth-child(1) {
+.equipo p:nth-child(1) {
   text-decoration: underline;
 }
 
@@ -243,6 +294,7 @@ Estilos página Ubicación
 ===================================================*/
 .ubicacion {
   margin: 10px 10px 10px 10px;
+  text-align: center;
 }
 .ubicacion iframe {
   width: 90%;
@@ -282,20 +334,20 @@ Estilos página Contacto
 }
 
 .formulario {
-  margin-top: 10px;
+  margin: 10px 10px 10px 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  justify-content: space-around;
-  grid-gap: 50px 50px;
+  justify-items: center;
+  justify-content: space-evenly;
+  grid-gap: 20px 20px;
+}
+.formulario div {
+  font-weight: bold;
 }
 .formulario fieldset {
   margin: 10px 10px 10px 10px;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
   border: solid grey 2px;
   border-radius: 20px;
 }
@@ -314,6 +366,17 @@ Estilos página Contacto
 .formulario fieldset:nth-child(4) {
   grid-column: 2;
   grid-row: 2;
+}
+@media only screen and (max-width: 400px) {
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    width: 80%;
+    justify-items: center;
+    text-align: center;
+  }
 }
 
 .formulario__item {

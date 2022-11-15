@@ -23,6 +23,13 @@ Estilos barra navegación
 .superior_nav {
     display: flex;
     width: 100%;
+    & {
+        @media only screen and (max-width: 400px) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
 }
 
 .logo {
@@ -36,6 +43,11 @@ Estilos barra navegación
 
 .superior__contenedor__menu {
     width: 50%;
+    & {
+        @media only screen and (max-width: 400px) {
+            margin-left: 30px;
+        }
+    }
 }
 
 .superior__contenedor__lista {
@@ -78,18 +90,8 @@ Estilos barra navegación
 }
 
 /*===================================================
-Estilos <main> y pié de página <FOOTER>
+Estilo Pié de página <FOOTER>
 ===================================================*/
-
-main {
-    display: flex;
-    justify-content: flex-start;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-}
 
 footer {
     width: 100%;
@@ -114,12 +116,22 @@ footer {
 /*===================================================
 Estilos página Inicio
 ===================================================*/
+.principal {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 #galeria {
     @include margenes-10;
     justify-items: center;
     align-items: center;
     width: 90%;
+    & {
+        @media only screen and (max-width: 400px) {
+            width: 100%;
+        }
+    }
 }
 
 /*===================================================
@@ -189,6 +201,13 @@ Estilos página Servicios
             @extend %servicios-fotos;
         }
     }
+    & {
+        @media only screen and (max-width: 400px) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
 }
 
 /*===================================================
@@ -197,38 +216,71 @@ Estilos página Producto // Sobre Nosotros
 .producto {
     width: 100%;
 
-    div {
-            text-align: center;
-            video {
-                width: 90%;
-            }
-        }
     h2 {
         @include margenes-10;
     }
     p {
         font-weight: bold;
     }
-    section {
-        margin-top: 10px;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        div {
-            height: 250px;
-            width: 300px;
-            img {
-                height: 200px;
-                width: 200px;
-                border-radius: 50%;
-                object-fit: cover;
-                box-shadow: $sombra;
-            }
+}
+
+.contenedor__producto {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & {
+        @media only screen and (max-width: 400px) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
         }
-        p:nth-child(1) {
-            text-decoration: underline;
+    }
+}
+
+.video {
+    text-align: center;
+    width: 50%;
+    video {
+        width: 90%;
+    }
+
+    & {
+        @media only screen and (max-width: 400px) {
+            width: 100%;
         }
+    }
+}
+
+.contenedor__equipo {
+    text-align: center;
+    width: 50%;
+    & {
+        @media only screen and (max-width: 400px) {
+            width: 100%;
+        }
+    }
+}
+
+.equipo {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    div {
+        height: 250px;
+        width: 300px;
+        img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: $sombra;
+        }
+    }
+    p:nth-child(1) {
+        text-decoration: underline;
     }
 }
 
@@ -238,7 +290,7 @@ Estilos página Ubicación
 
 .ubicacion {
     @include margenes-10;
-
+    text-align: center;
     iframe {
         width: 90%;
     }
@@ -282,20 +334,22 @@ Estilos página Contacto
 }
 
 .formulario {
-    margin-top: 10px;
+    // margin-top: 10px;
+    @include margenes-10;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    justify-content: space-around;
-    grid-gap: 50px 50px;
+    justify-items: center;
+    justify-content: space-evenly;
+    grid-gap: 20px 20px;
+
+    div {
+        font-weight: bold;
+    }
 
     fieldset {
         @include margenes-10;
         width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
         border: solid grey 2px;
         border-radius: 20px;
         &:nth-child(1) {
@@ -313,6 +367,18 @@ Estilos página Contacto
         &:nth-child(4) {
             grid-column: 2;
             grid-row: 2;
+        }
+    }
+
+    & {
+        @media only screen and (max-width: 400px) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-left: 20px;
+            width: 80%;
+            justify-items: center;
+            text-align: center;
         }
     }
 
