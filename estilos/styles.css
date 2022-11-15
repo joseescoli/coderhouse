@@ -108,6 +108,7 @@ Estilos <main> y pié de página <FOOTER>
 main {
   display: flex;
   justify-content: flex-start;
+  justify-items: center;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
@@ -203,8 +204,38 @@ Estilos página Producto // Sobre Nosotros
 .producto {
   width: 100%;
 }
+.producto div {
+  text-align: center;
+}
+.producto div video {
+  width: 90%;
+}
 .producto h2 {
   margin: 10px 10px 10px 10px;
+}
+.producto p {
+  font-weight: bold;
+}
+.producto section {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.producto section div {
+  height: 250px;
+  width: 300px;
+}
+.producto section div img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.producto section p:nth-child(1) {
+  text-decoration: underline;
 }
 
 /*===================================================
