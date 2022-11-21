@@ -28,12 +28,22 @@ Estilos barra navegación
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            justify-items: center;
         }
     }
 }
 
 .logo {
     width: 50%;
+
+    & {
+        @media only screen and (max-width: 400px) {
+            text-align: center;
+        }
+    }
 
     img {
         position: relative;
@@ -54,15 +64,7 @@ Estilos barra navegación
     line-height: 1.5;
 
     li {
-        margin-bottom: 5px;
-        text-align: center;
-        background-color: $color-botones;
-        background: linear-gradient(to left, rgb(192,192,192) 90%, red 80%);
-        width: 150px;
-        height: 22px;
-        border: solid red 1px;
-        border-radius: 15px;
-        box-shadow: $sombra;
+        @include botones-menu;
 
         &:not(.paginaActual){
             list-style-type: none;
@@ -120,6 +122,9 @@ Estilos página Inicio
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    p {
+        font-weight: bold;
+    }
 }
 
 #galeria {
@@ -146,7 +151,7 @@ Estilos página Servicios
 
     p {
         margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     img {
@@ -159,7 +164,10 @@ Estilos página Servicios
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-evenly;
+    align-content: center;
     align-items: center;
+    vertical-align: middle;
+    height: 100%;
     div {
         &:nth-child(1) {
             @extend %servicios-cajas;
@@ -207,6 +215,42 @@ Estilos página Servicios
             flex-direction: column;
             flex-wrap: wrap;
         }
+
+        @media screen and (min-width: 401px) and (max-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(3, 3fr);
+            grid-template-rows: repeat(3, 1fr);
+            row-gap: 40px;
+            justify-content: space-evenly;
+            align-content: center;
+            align-items: center;
+            div {
+                &:nth-child(1) {
+                    grid-column: 1 / 3;
+                    grid-row: 1;
+                }
+                &:nth-child(2) {
+                    grid-column: 3 / 6;
+                    grid-row: 1;
+                }
+                &:nth-child(3) {
+                    grid-column: 1 / 6;
+                    grid-row: 2;
+                }
+                &:nth-child(4) {
+                    grid-column: 1;
+                    grid-row: 3;
+                }
+                &:nth-child(5) {
+                    grid-column: 2 / 4;
+                    grid-row: 3;
+                }
+                &:nth-child(6) {
+                    grid-column: 5;
+                    grid-row: 3;
+                }
+            }
+        }
     }
 }
 
@@ -234,6 +278,7 @@ Estilos página Producto // Sobre Nosotros
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
+            justify-content: center;
         }
     }
 }
@@ -266,7 +311,7 @@ Estilos página Producto // Sobre Nosotros
     margin-top: 10px;
     margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     div {
         height: 250px;
@@ -329,8 +374,19 @@ Estilos página Contacto
 
     img {
         width: 60%;
+        & {
+            @media only screen and (max-width: 400px) {
+                width: 100%;
+            }
+        }
     }
     
+    & {
+        @media only screen and (max-width: 400px) {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
 }
 
 .formulario {
@@ -368,6 +424,12 @@ Estilos página Contacto
             grid-column: 2;
             grid-row: 2;
         }
+
+        & {
+            @media only screen and (max-width: 400px) {
+                padding-bottom: 10px;
+            }
+        }
     }
 
     & {
@@ -382,6 +444,19 @@ Estilos página Contacto
         }
     }
 
+    input[type=text], input[type=email], input[type=number] {
+        width: 80%;
+    }
+
+    input[type=submit], input[type=reset] {
+        @include botones-menu;
+        font-weight: bold;
+    }
+
+    input[type=submit]:hover, input[type=reset]:hover {
+        color: black;
+        background: linear-gradient(to left, rgb(192,192,192) 50%, red 80%);
+    }
 }
 
 .formulario__item {
